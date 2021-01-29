@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="582.0" prefWidth="753.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Ajouter1Controller">
+   <children>
+      <JFXComboBox fx:id="comboNom" editable="true" focusColor="BLACK" labelFloat="true" layoutX="141.0" layoutY="156.0" onAction="#comboNom" prefHeight="35.0" prefWidth="202.0" promptText="nom" visibleRowCount="500" />
+      <JFXTextField fx:id="txtPuAchat" focusColor="BLACK" labelFloat="true" layoutX="141.0" layoutY="219.0" promptText="PU Achat">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtVenteFrsp" focusColor="BLACK" labelFloat="true" layoutX="141.0" layoutY="284.0" promptText="PU Vente frsp">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPuVenteFosa" focusColor="BLACK" labelFloat="true" layoutX="455.0" layoutY="285.0" promptText="PU Vente fosa">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQteJour" focusColor="BLACK" labelFloat="true" layoutX="141.0" layoutY="351.0" promptText="Quantiter jour">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQteNuit" focusColor="BLACK" labelFloat="true" layoutX="455.0" layoutY="352.0" promptText="Quantiter nuit">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMtnJour" focusColor="BLACK" labelFloat="true" layoutX="141.0" layoutY="411.0" promptText="Montant jour">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMtnNuit" focusColor="BLACK" labelFloat="true" layoutX="455.0" layoutY="412.0" promptText="Montant nuit">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="valider" layoutX="435.0" layoutY="520.0" onAction="#valider" prefHeight="13.0" prefWidth="144.0" style="-fx-background-color: #107C41;" text="Valider" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="annuler" layoutX="595.0" layoutY="520.0" onAction="#annuler" prefHeight="13.0" prefWidth="144.0" style="-fx-background-color: #107C41;" text="Annuler" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="322.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajout de produit" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="comboPresentation" editable="true" focusColor="BLACK" labelFloat="true" layoutX="455.0" layoutY="156.0" onAction="#comboPresentation" prefHeight="35.0" prefWidth="202.0" promptText="presetation" visibleRowCount="500" />
+   </children>
+</AnchorPane>

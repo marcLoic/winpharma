@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="582.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Ajouter1Controller">
+   <children>
+      <JFXTextField fx:id="txtNom" focusColor="BLACK" labelFloat="true" layoutX="141.0" layoutY="157.0" promptText="Nom">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPresentation" focusColor="BLACK" labelFloat="true" layoutX="451.0" layoutY="157.0" promptText="Présentation">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPuAchat" focusColor="BLACK" labelFloat="true" layoutX="141.0" layoutY="219.0" onKeyPressed="#check" promptText="PU Achat">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPuVenteFrsp" focusColor="BLACK" labelFloat="true" layoutX="141.0" layoutY="284.0" onKeyPressed="#check" promptText="PU Vente frsp">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPuVenteFosa" focusColor="BLACK" labelFloat="true" layoutX="455.0" layoutY="285.0" onKeyPressed="#check" promptText="PU Vente fosa">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQuantiterJour" focusColor="BLACK" labelFloat="true" layoutX="141.0" layoutY="352.0" onKeyPressed="#check" promptText="Quantiter jour">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQuantiterNuit" focusColor="BLACK" labelFloat="true" layoutX="451.0" layoutY="352.0" onKeyPressed="#check" promptText="Quantiter nuit">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMtnJour" focusColor="BLACK" labelFloat="true" layoutX="141.0" layoutY="411.0" onKeyPressed="#check" promptText="Montant jour">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtMtnNuit" focusColor="BLACK" labelFloat="true" layoutX="455.0" layoutY="412.0" onKeyPressed="#check" promptText="Montant nuit">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="valider" layoutX="435.0" layoutY="533.0" onAction="#valider" prefHeight="13.0" prefWidth="144.0" style="-fx-background-color: #107C41;" text="Valider" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="annuler" layoutX="595.0" layoutY="533.0" onAction="#annuler" prefHeight="13.0" prefWidth="144.0" style="-fx-background-color: #107C41;" text="Annuler" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="322.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajout de produit" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

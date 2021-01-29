@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="344.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifierUtilisateurController">
+   <children>
+      <Label layoutX="106.0" layoutY="14.0" text="Modification de l'utilisateur" underline="true">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="67.0" text="Nom:">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="115.0" text="Prenom:">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="169.0" text="Username:">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtNom" layoutX="156.0" layoutY="70.0" prefHeight="25.0" prefWidth="237.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtPrenom" layoutX="156.0" layoutY="119.0" prefHeight="25.0" prefWidth="237.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <JFXTextField fx:id="txtUsername" layoutX="156.0" layoutY="172.0" prefHeight="25.0" prefWidth="237.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></JFXTextField>
+      <Label layoutX="53.0" layoutY="217.0" text="Date:">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelDate" layoutX="156.0" layoutY="217.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="valider" layoutX="282.0" layoutY="294.0" onAction="#valider" style="-fx-background-color: #107C41;" text="Valider" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="annuler" layoutX="385.0" layoutY="294.0" onAction="#annuler" style="-fx-background-color: #107C41;" text="Annuler" textFill="WHITE">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

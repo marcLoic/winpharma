@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="628.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConsulterController">
+   <children>
+      <JFXTextField fx:id="txtSearchProduit" focusColor="BLACK" labelFloat="true" layoutX="35.0" layoutY="77.0" onKeyReleased="#searchproduit" prefHeight="25.0" prefWidth="260.0" promptText="Filtrer par nom" />
+      <Text layoutX="295.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Listes des produits" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <TableView fx:id="table1" layoutX="14.0" layoutY="128.0" prefHeight="453.0" prefWidth="727.0">
+        <columns>
+          <TableColumn fx:id="tableNom1" prefWidth="179.0" text="Nom" />
+          <TableColumn fx:id="tablePresetation1" minWidth="0.0" prefWidth="80.66665649414062" text="Presentation" />
+            <TableColumn fx:id="tableQuantiterJour1" minWidth="0.0" prefWidth="93.33331298828125" text="Quantiter Jour" />
+            <TableColumn fx:id="tableMontantJour1" minWidth="0.0" prefWidth="95.66668701171875" text="Montant jour" />
+            <TableColumn fx:id="tableQuantiterNuit1" minWidth="0.0" prefWidth="92.0" text="Quantiter Nuit" />
+            <TableColumn fx:id="tableMontantNuit1" minWidth="0.0" prefWidth="94.66668701171875" text="Montant Nuit" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

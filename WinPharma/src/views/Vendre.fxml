@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="628.0" prefWidth="753.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VendreController">
+   <children>
+      <JFXTextField fx:id="txtQuantiter" focusColor="BLACK" labelFloat="true" layoutX="672.0" layoutY="65.0" prefHeight="19.0" prefWidth="60.0" promptText="Quantiter " />
+      <JFXButton fx:id="valider" layoutX="551.0" layoutY="597.0" onAction="#valider" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #107C41;" text="Valider" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="annuler" layoutX="665.0" layoutY="597.0" onAction="#annuler" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #107C41;" text="Annuler" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <Text layoutX="244.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vente de produit" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="ajouter" layoutX="668.0" layoutY="110.0" onAction="#ajouter" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #107C41;" text="Ajouter" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="supprimer" layoutX="667.0" layoutY="429.0" onAction="#supprimer" prefHeight="25.0" prefWidth="80.0" style="-fx-background-color: #107C41;" text="Supprimer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="table1" layoutX="14.0" layoutY="37.0" prefHeight="315.0" prefWidth="637.0">
+        <columns>
+          <TableColumn fx:id="tableNom1" prefWidth="179.0" text="Nom" />
+          <TableColumn fx:id="tablePresetation1" minWidth="0.0" prefWidth="80.66665649414062" text="Presentation" />
+            <TableColumn fx:id="tableQuantiterJour1" minWidth="0.0" prefWidth="93.33331298828125" text="Quantiter Jour" />
+            <TableColumn fx:id="tableMontantJour1" minWidth="0.0" prefWidth="95.66668701171875" text="Montant jour" />
+            <TableColumn fx:id="tableQuantiterNuit1" minWidth="0.0" prefWidth="92.0" text="Quantiter Nuit" />
+            <TableColumn fx:id="tableMontantNuit1" minWidth="0.0" prefWidth="94.66668701171875" text="Montant Nuit" />
+        </columns>
+      </TableView>
+      <TableView fx:id="table2" layoutX="13.0" layoutY="403.0" prefHeight="177.0" prefWidth="641.0">
+         <columns>
+            <TableColumn fx:id="tableNom2" prefWidth="248.33334350585938" text="Nom" />
+            <TableColumn fx:id="tablePresetation2" minWidth="0.0" prefWidth="154.66665649414062" text="Presentation" />
+            <TableColumn fx:id="tableQuantiter2" minWidth="0.0" prefWidth="138.0" text="Quantiter" />
+            <TableColumn fx:id="tableMontant2" minWidth="0.0" prefWidth="101.33331298828125" text="Montant" />
+         </columns>
+      </TableView>
+      <Text layoutX="249.0" layoutY="392.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produit choisi" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
