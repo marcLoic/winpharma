@@ -60,8 +60,8 @@ public class ConsulterController implements Initializable {
 				if (newValue == null || newValue.isEmpty()) {
 					return true;
 				}
-				// String lowzeCaseFilter = newValue.toLowerCase();
-				if (String.valueOf(produit.getNom()).contains(newValue)) {
+				String lowzeCaseFilter = newValue.toLowerCase();
+				if (produit.getNom().toLowerCase().indexOf(lowzeCaseFilter) != -1) {
 					return true;
 				} else {
 					return false;

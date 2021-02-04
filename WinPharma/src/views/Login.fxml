@@ -16,7 +16,7 @@
       <VBox layoutX="410.0" layoutY="-9.0" prefHeight="460.0" prefWidth="360.0" style="-fx-background-color: #49455A;" />
       <ImageView fitHeight="330.0" fitWidth="707.0" layoutX="-3.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../Documents/Winmoney/Projet%20WinMoney/Pharmacy/images/77.jpg" />
+            <Image url="@../../images/77.jpg" />
          </image>
       </ImageView>
       <JFXTextField id="username" fx:id="txtUsername" focusColor="WHITE" labelFloat="true" layoutX="524.0" layoutY="168.0" promptText="username" unFocusColor="WHITE">

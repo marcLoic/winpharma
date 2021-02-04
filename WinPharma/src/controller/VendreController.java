@@ -85,6 +85,7 @@ public class VendreController implements Initializable{
     
     ObservableList<Produit> olistTable1= FXCollections.observableArrayList();
     ObservableList<Produit> olistTable2 = FXCollections.observableArrayList();
+    ObservableList<Produit> olistTable3 = FXCollections.observableArrayList();
     ObservableList<Produit> olistProduit = FXCollections.observableArrayList();
     Alerts alert = new Alerts();
 	DBconnection db = new DBconnection();
@@ -99,6 +100,10 @@ public class VendreController implements Initializable{
 		}
     	else if (!valideNumber(txtQuantiter.getText())) {
 			st = "Verifier que la valeur quantiter est valide - ";
+			alert.alertError(st);
+		}
+		else if(table1.getSelectionModel().getSelectedItem()==null) {
+			st="Choisisez une ligne";
 			alert.alertError(st);
 		}
 		else {
@@ -118,9 +123,16 @@ public class VendreController implements Initializable{
 				olistTable2.add(produit);
 				table2.setItems(olistTable2);
 				txtQuantiter.clear();
-				//olistTable1.get(table1.getSelectionModel().getSelectedIndex()).setQteJour(qteUpdate);
-				//table1.setItems(olistTable1);
-				table1.getSelectionModel().getSelectedItem().setQteJour(qteUpdate);
+				int index = table1.getSelectionModel().getSelectedIndex();
+				olistTable1.get(index).setQteJour(qteUpdate);
+				olistProduit.clear();
+				for(Produit pro: olistTable1) {
+					olistProduit.add(pro);
+				}
+				olistTable1.removeAll(olistTable1);
+				for(Produit pro: olistProduit) {
+					olistTable1.add(pro);
+				}
 			}
 		}
     }
@@ -142,7 +154,26 @@ public class VendreController implements Initializable{
 			alert.alertError(st);
 		}
 		else {
+			int produitid = table2.getSelectionModel().getSelectedItem().getProduitID();
+			int quantiter = table2.getSelectionModel().getSelectedItem().getQteJour();
 			table2.getItems().removeAll(table2.getSelectionModel().getSelectedItem());
+			int i = 0;
+			int previousQTE = 0;
+			for(Produit pro: olistTable1) {
+				if(pro.getProduitID() == produitid) {
+					previousQTE = pro.getQteJour() + quantiter;
+					olistTable1.get(i).setQteJour(previousQTE);
+				}
+				i++;
+			}
+			olistProduit.clear();
+			for(Produit pro: olistTable1) {
+				olistProduit.add(pro);
+			}
+			olistTable1.removeAll(olistTable1);
+			for(Produit pro: olistProduit) {
+				olistTable1.add(pro);
+			}
 		}
     }
 
